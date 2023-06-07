@@ -118,7 +118,7 @@ function App() {
       </div>
       <footer id="element6" className={`hidden ${showElements.includes('element6') ? 'show' : ''}`}>
         <p>Copyright &copy; 2023 Arklink Solutions.<br/>(GNU General Public License (v3))<br/>All rights reserved.</p>
-        <a href="page-privacy.html">Privacy Policy</a>
+        <a href="page-privacy.html"><p>Privacy Policy</p></a>
       </footer>
     </div>
   );
