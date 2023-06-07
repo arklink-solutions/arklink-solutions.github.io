@@ -179,6 +179,10 @@ section{
         margin-left: 20vw;
         margin-right: 20vw;
     }
+
+    .navbar-nav-text-heading {
+        font-size: inherit;
+    }
 }
 
 @media only screen and (max-width: 768px){
@@ -192,5 +196,9 @@ section{
         font-size: 5vw;
         margin-left: 20vw;
         margin-right: 20vw;
+    }
+
+    .navbar-nav-text-heading{
+        font-size: 0px !important;
     }
 }

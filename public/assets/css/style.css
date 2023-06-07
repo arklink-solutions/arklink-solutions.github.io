@@ -173,6 +173,16 @@ section{
         height: auto;
         animation: boat_rock 2s ease-in-out infinite;
     }
+
+    p {
+        font-size: 2vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .navbar-nav-text-heading {
+        font-size: inherit;
+    }
 }
 
 @media only screen and (max-width: 768px){
@@ -180,5 +190,15 @@ section{
         width: 40vw;
         height: auto;
         animation: boat_rock 2s ease-in-out infinite;
+    }
+
+    p {
+        font-size: 5vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+    }
+
+    .navbar-nav-text-heading{
+        font-size: 0px;
     }
 }
