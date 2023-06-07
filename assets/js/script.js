@@ -1,9 +1,14 @@
-window.addEventListener('scroll', function() {
-    var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-    var element2 = document.getElementById('hero');
-    element2.style.transform = 'translateY(' + (scrollTop * -0.5) + 'px)';
-  });
-  
-
-
-  
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+    console.log(entry)
+    if(entry.isIntersecting){
+    entry.target.classList.add('show');
+    
+    } else{
+        entry.target.classList.remove('show');
+    }
+    });
+    });
+    
+    const hiddenElements =document.querySelectorAll('.hidden');
+    hiddenElements.forEach((el) => observer.observe(el));

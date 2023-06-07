@@ -1,19 +1,35 @@
-/* Reset some default styles */
-body, h1, h2, p, ul, li {
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: Arial, sans-serif;
-  }
-  
-  header {
-    background-color: #f5f5f5;
-    padding: 20px;
-  }
-  
-  nav ul {
+/* Font Setup*/
+@font-face {
+    font-family: FiraCode-Medium;
+    src: url(../font/FiraCode-Medium.woff2) format("woff2");
+    font-weight: 500;
+    font-style: normal
+}
+
+@font-face {
+    font-family: FiraCode-SemiBold;
+    src: url(../font/FiraCode-SemiBold.woff2) format("woff2");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: FiraCode-Bold;
+    src: url(../font/FiraCode-Bold.woff2) format("woff2");
+    font-weight: 400;
+    font-style: normal
+}
+
+*{
+    scroll-behavior: smooth;
+    align-items:center;
+    text-align: center;
+    font-family: FiraCode-SemiBold, sans-serif;
+}
+
+/* Navbar */
+
+nav ul {
     list-style-type: none;
   }
   
@@ -26,106 +42,99 @@ body, h1, h2, p, ul, li {
     text-decoration: none;
     color: #333;
   }
-  
-  main {
-    padding: 40px;
-  }
-  
-  
-  #hero {
-    text-align: center;
-    padding: 40px 0;
-    background-color: #87CEEB;
-    color: #fff;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    z-index: 2000;
-  }
-
-  
-  #hero h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-  }
-  
-  .cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #fff;
-    color: #87CEEB;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  #hero * {
-    margin: auto;
-  }
-
-  .cta-button:hover {
-    background-color: #87CEEB;
-    color: #fff;
-  }
-  
-  #about {
-    z-index: 1;
-    margin-top: -25vh;
-    margin-bottom: 40px;
-  }
-  
-  #goals {
-    margin-bottom: 40px;
-  }
-  
-  #goals ul {
-    list-style-type: square;
-    margin-left: 20px;
-  }
-  
-  #contact {
-    margin-bottom: 40px;
-  }
-  
-  #contact input, #contact textarea {
-    display: block;
-    margin-bottom: 10px;
-    padding: 5px;
-    width: 100%;
-  }
-  
-  #contact button {
-    padding: 10px 20px;
-    background-color: #87CEEB;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #contact button:hover {
-    background-color: #0066cc;
-  }
-  
-  footer {
-    background-color: #f5f5f5;
-    text-align: center;
-    padding: 20px;
-  }
-
-  
-  /* Global, Universal styling*/
-.logo {
+  .logo {
     width:15vw; 
     height:15vw;
     max-height: 40px;
     max-width: 40px;
 }
 
-*{
-    scroll-behavior: smooth;
-    align-items:center;
+/* Global, Universal styling*/
+
+body {
+    background: black;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    background: linear-gradient(rgb(92, 198, 196), lightblue, rgb(0, 110, 255), blue, darkblue, black);
+}
+
+section{
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    align-content: center;
+}
+.hidden{
+    opacity: 0;
+    transition: all 3s;
+    filter: blur(5px);
+    transform: translateX(-100%);
+    }
+    .show{
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    }
+    .hidden:nth-child(2){
+        transition-delay:1000ms ;
+    }
+    .hidden:nth-child(3){
+        transition-delay:400ms ;
+    }
+    .hidden:nth-child(4){
+        transition-delay:600ms ;
+    }
+.flex{
+    display: flex;
+    gap: 4rem;
+}
+    img{
+        height: 150px;
+        width: 100%;
+     
+        
+    }
+    .logo:nth-child(2){
+        transition-delay: 200ms;
+    }
+    .logo:nth-child(3){
+        transition-delay: 400ms;
+    }
+    .logo:nth-child(4){
+        transition-delay: 600ms;
+    }
+  body {
+    font-family: Arial, sans-serif;
+  }
+  
+  header {
+    background-color: #f5f5f5;
+    padding: 20px;
+  }
+  
+  main {
+    padding: 40px;
+  }
+
+  footer {
+    background-color: darkblue;
     text-align: center;
+    padding: 20px;
+  }
+
+  footer *{
+    font-size: 1vw;
+  }
+
+
+@keyframes boat_rock {
+    0%   {transform: rotate(-15deg);}
+    50%  {transform: rotate(15deg);}
+    100% {transform: rotate(-15deg);}
+}
+#boat {
+    width: 10vw;
+    height: auto;
+    animation: boat_rock 2s ease-in-out infinite;
 }
