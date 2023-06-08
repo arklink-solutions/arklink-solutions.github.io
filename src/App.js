@@ -107,12 +107,12 @@ function App() {
     <div id="contactus">
       <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> 
     </div>
-    <section id="element5" className={`hidden ${showElements.includes('element5') ? 'show' : ''}`}>
+    <section id="element5" className={`hidden ${showElements.includes('element5') ? 'show' : ''}`} >
       <h1>Contact Us</h1>
-      <form>
-      <input type="text" placeholder="Name"/><br/>
-      <input type="email" placeholder="Email"/><br/>
-      <textarea placeholder="Message"></textarea><br/>
+      <form method="post" action="contact-form-process.php">
+      <input type="text" id="Name" name="Name" placeholder="Name" required/><br/>
+      <input type="email" id="Email" name="Email" placeholder="Email" required/><br/>
+      <textarea id="Message" name="Message" placeholder="Message" rows='6' maxlength='3000' required></textarea><br/>
       <button type="submit">Submit</button>
       </form>
     </section>
