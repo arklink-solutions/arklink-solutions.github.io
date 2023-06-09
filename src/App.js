@@ -109,11 +109,11 @@ function App() {
     </div>
     <section id="element5" className={`hidden ${showElements.includes('element5') ? 'show' : ''}`} >
       <h1>Contact Us</h1>
-      <form method="post" action="contact-form-process.php">
+      <form method="post">
       <input type="text" id="Name" name="Name" placeholder="Name" required/><br/>
       <input type="email" id="Email" name="Email" placeholder="Email" required/><br/>
       <textarea id="Message" name="Message" placeholder="Message" rows='6' maxlength='3000' required></textarea><br/>
-      <button type="submit">Submit</button>
+      <button type="submit" value="Send Email" onclick="sendEmail()">Submit</button>
       </form>
     </section>
     <div id="privacy">
